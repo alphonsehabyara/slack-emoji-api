@@ -1,0 +1,2 @@
+module SlackEmojisHelper
+end

@@ -1,0 +1,2 @@
+class SlackEmoji < ApplicationRecord
+end

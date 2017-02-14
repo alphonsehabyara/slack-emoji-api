@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nature: MyString
+  food_and_drink: MyString
+  celebration: MyString
+  activity: MyString
+  travel_and_places: MyString
+  objects_and_symbols: MyString
+  custom: MyString
+  emoji: MyString
+
+two:
+  nature: MyString
+  food_and_drink: MyString
+  celebration: MyString
+  activity: MyString
+  travel_and_places: MyString
+  objects_and_symbols: MyString
+  custom: MyString
+  emoji: MyString
