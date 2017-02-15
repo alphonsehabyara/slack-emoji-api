@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SlackEmojisControllerTest < ActionDispatch::IntegrationTest
+class Api::V2::EmojisControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

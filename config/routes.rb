@@ -1,3 +1,17 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/emojis", to: 'emojis#index'
+  post "/emojis", to: 'emojis#create'
+  get "/emojis/id", to: 'emojis#show'
+  patch "/emojis/id", to: 'emojis#update'
+  delete "/emojis/id", to: 'emojis#destroy'
+
+  namespace :api do
+    namespace :v2 do
+      get "/emojis", to: 'emojis#index'
+      post "/emojis", to: 'emojis#create'
+      patch "/emojis/id", to: 'emojis#update'
+      get "/emojis/id", to: 'emojis#show'
+      delete "/emojis/id", to: 'emojis#destroy'
+    end 
+  end
 end

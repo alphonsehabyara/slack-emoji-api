@@ -1,2 +1,0 @@
-class SlackEmojisController < ApplicationController
-end
