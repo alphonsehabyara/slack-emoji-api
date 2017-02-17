@@ -1,4 +1,4 @@
-json.array! @emoji.each do |emoji|
+json.array! @emojis.each do |emoji|
   json.id emoji.id
   json.people emoji.people
   json.nature emoji.nature

@@ -1,7 +1,7 @@
 class Api::V2::EmojisController < ApplicationController
 
   def index
-    @emoji = SlackEmoji.all 
+    @emojis = SlackEmoji.all
   end
 
   def create
