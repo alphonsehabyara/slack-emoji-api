@@ -1,0 +1,61 @@
+<div ng-app="app">
+  <div ng-controller="emojisCtrl" ng-init="setup()">
+  <p></p> 
+     Filter Emojis: <input ng-model="filterQuery"><br>
+     <button ng-click="toggleOrder('people')">Sort By People</button>
+     <button ng-click="toggleOrder('custom')">Sort By Custom</button> <br><br>
+     <h2>Add Emoji</h2>
+    <div>
+      People: <input ng-model="emojiPeople" placeholder="People"><br>
+      Nature: <input ng-model="emojiNature" placeholder="Nature"><br>
+      Food and Drink: <input ng-model="emojiFoodAndDrink" placeholder="Food and Drink"><br>
+      Celebration: <input ng-model="emojiCelebration" placeholder="Celebration"><br>
+      Activity: <input ng-model="emojiActivity" placeholder="Activity"><br>
+      Travel and Places: <input ng-model="emojiTravelAndPlaces" placeholder="Travel and Places"><br>
+      Objects and Symbols: <input ng-model="emojiObjectsAndSymbols" placeholder="Objects and Symbols"><br>
+      Custom: <input ng-model="emojiCustom" placeholder="Custom"><br>
+      Emoji: <input ng-model="emojiEmoji" placeholder="Emoji"><br>
+      <button ng-click="addEmoji(emojiPeople, emojiNature, emojiFoodAndDrink, emojiCelebration, emojiActivity, emojiTravelAndPlaces, emojiObjectsAndSymbols, emojiCustom, emojiEmoji)">Add Emoji</button>
+    </div><br>
+    <h2>List of Emojis</h2>
+
+    <table class="table">
+      <tr>
+        <th ng-click="toggleOrder('people')">People</th>
+        <th ng-click="toggleOrder('nature')">Nature</th>
+        <th ng-click="toggleOrder('food_and_drink')">Food and Drink</th>
+        <th ng-click="toggleOrder('celebration')">Celebration</th>
+        <th ng-click="toggleOrder('activity')">Activity</th>
+        <th ng-click="toggleOrder('travel_and_places')">Travel and Places</th>
+        <th ng-click="toggleOrder('objects_and_symbols')">Objects and Symbols</th>
+        <th ng-click="toggleOrder('custom')">Custom</th>
+        <th ng-click="toggleOrder('emoji')">Emoji</th>
+        <th>Delete</th>
+      <tr ng-repeat="emoji in emojis | filter: filterQuery | orderBy:orderAttribute">
+        <td>{{emoji.people}}</td>
+        <td>{{emoji.nature}}</td>
+        <td>{{emoji.food_and_drink}}</td>
+        <td>{{emoji.celebration}}</td>
+        <td>{{emoji.activity}}</td>
+        <td>{{emoji.travel_and_places}}</td>
+        <td>{{emoji.objects_and_symbols}}</td>
+        <td>{{emoji.custom}}</td>
+        <td>{{emoji.emoji}}</td>
+        <td><button ng-click="deleteEmoji(emoji, $index)">Delete Emoji</button></td>
+      </tr>
+    </table>
+
+<!--     <div ng-repeat="emoji in emojis | filter: filterQuery | orderBy:orderAttribute">
+      <h2 ng-click="togglePeople(emoji)">{{emoji.people}}</h2>
+      <p ng-if="emoji.natureVisible">{{emoji.nature}}</p>
+      <p ng-if="emoji.food_and_drinkVisible">{{emoji.food_and_drink}}</p>
+      <p ng-if="emoji.celebrationVisible">{{emoji.celebration}}</p>
+      <p ng-if="emoji.activityVisible">{{emoji.activity}}</p>
+      <p ng-if="emoji.travel_and_placesVisible">{{emoji.travel_and_places}}</p>
+      <p ng-if="emoji.objects_and_symbolsVisible">{{emoji.objects_and_symbols}}</p>
+      <p ng-if="emoji.customVisible">{{emoji.custom}}</p>
+      <p ng-if="emoji.emojiVisible">{{emoji.emoji}}</p>
+      <button ng-click="deleteEmoji(emoji, $index)">Delete Emoji</button>
+    </div> -->
+  </div>
+</div>  

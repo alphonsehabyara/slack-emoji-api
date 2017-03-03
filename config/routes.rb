@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # get "/emojis", to: 'emojis#index'
+  get "/emojis", to: 'emojis#index'
   # post "/emojis", to: 'emojis#create'
   # get "/emojis/:id", to: 'emojis#show'
   # patch "/emojis/:id", to: 'emojis#update'
